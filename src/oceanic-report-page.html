@@ -28,9 +28,9 @@ along with Pedro's Toolbox App.  If not, see <http://www.gnu.org/licenses/>.
 <link rel="import" href="../bower_components/paper-card/paper-card.html">
 <link rel="import" href="../bower_components/paper-spinner/paper-spinner.html">
 
-<link rel="import" href="./fsn-avwx-metar/fsn-avwx-metar.html">
+<link rel="import" href="./fsn-oceanic-report/fsn-oceanic-report.html">
 
-<dom-module id="metar-page">
+<dom-module id="oceanic-report-page">
   <template>
     <style include="shared-styles">
       :host {
@@ -38,15 +38,15 @@ along with Pedro's Toolbox App.  If not, see <http://www.gnu.org/licenses/>.
       }
     </style>
 
-    <fsn-avwx-metar show-search-bar=""></fsn-avwx-metar>
+    <fsn-oceanic-report></fsn-oceanic-report>
 
   </template>
 
   <script>
-    class MetarPage extends Polymer.Element {
-      static get is() { return 'metar-page'; }
+    class OceanicReportPage extends Polymer.Element {
+      static get is() { return 'oceanic-report-page'; }
     }
 
-    window.customElements.define(MetarPage.is, MetarPage);
+    window.customElements.define(OceanicReportPage.is, OceanicReportPage);
   </script>
 </dom-module>

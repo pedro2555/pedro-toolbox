@@ -18,35 +18,32 @@ You should have received a copy of the GNU General Public License
 along with Pedro's Toolbox App.  If not, see <http://www.gnu.org/licenses/>.
 --><link rel="import" href="../bower_components/polymer/polymer-element.html">
 <link rel="import" href="shared-styles.html">
-<link rel="import" href="../bower_components/iron-ajax/iron-ajax.html">
-<link rel="import" href="../bower_components/iron-icon/iron-icon.html">
-<link rel="import" href="../bower_components/iron-icons/iron-icons.html">
-<link rel="import" href="../bower_components/paper-input/paper-input.html">
-<link rel="import" href="../bower_components/paper-item/paper-item.html">
-<link rel="import" href="../bower_components/paper-item/paper-icon-item.html">
-<link rel="import" href="../bower_components/paper-item/paper-item-body.html">
-<link rel="import" href="../bower_components/paper-card/paper-card.html">
-<link rel="import" href="../bower_components/paper-spinner/paper-spinner.html">
 
-<link rel="import" href="./fsn-avwx-metar/fsn-avwx-metar.html">
-
-<dom-module id="metar-page">
+<dom-module id="skyvector-page">
   <template>
     <style include="shared-styles">
       :host {
         display: block;
+
+        height: 100%;
+
+        padding: 10px;
+      }
+
+      iframe {
+
       }
     </style>
 
-    <fsn-avwx-metar show-search-bar=""></fsn-avwx-metar>
+    <iframe width="100%" height="100%" src="https://skyvector.com/"></iframe>
 
   </template>
 
   <script>
-    class MetarPage extends Polymer.Element {
-      static get is() { return 'metar-page'; }
+    class SkyvectorPage extends Polymer.Element {
+      static get is() { return 'skyvector-page'; }
     }
 
-    window.customElements.define(MetarPage.is, MetarPage);
+    window.customElements.define(SkyvectorPage.is, SkyvectorPage);
   </script>
 </dom-module>
